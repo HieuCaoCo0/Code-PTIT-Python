@@ -1,10 +1,10 @@
 a, k, n = map(int, input().split())
 
-b = 1
+b = k - a%k
 found = False
 while (a + b) <= n:
-    if (a + b) % k == 0:
-        print (b, end=' ')
-        found = True
+    print (b, end=' ')
+    found = True
+    b += k
 if not found:
     print('-1')
